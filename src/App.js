@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import Darkmode from 'Darkmode';
+import { useState } from 'react';
+import { darkTheme, lightTheme } from 'theme';
 import './App.css';
+import { ThemeProvider } from "styled-components"
 
 function App() {
+  const [toggle, setToggle] = useState(false)
+  const onToggle = () => {
+    setToggle(!toggle)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={toggle ? darkTheme : lightTheme}>
+      <Darkmode onToggle={onToggle} toggle={toggle}/>
+    </ThemeProvider>
   );
 }
 

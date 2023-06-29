@@ -1,8 +1,12 @@
+/* 폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+/* 여백초기화 */
+*{margin: 0;padding: 0;box-sizing: inherit;} /* inherit은 부모요소를 상속받겠다는 것 */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Jua', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
